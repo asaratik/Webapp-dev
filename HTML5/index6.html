@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeoLocation | Run on a servers</title>
+</head>
+<body>
+<button onclick="getLocation()">Get Cords</button>
+<h1 id="coords"></h1>
+
+<script type="text/javascript">
+	var x = document.getElementsById(coords);
+	function getLocation() {
+		if(navigator.GeoLocation){
+			navigator.GeoLocation.getCurrentPosition(showPosition);
+		}
+		else{
+			x.innerHTML = "GeoLocation is not supported";
+		}
+
+		function showPosition(position){
+			x.innerHTML = "Latitude: "+ position.coords.latitude+"<br>Longitude: "+position.coords.longitude;
+		}
+	}
+</script>
+</body>
+</html>

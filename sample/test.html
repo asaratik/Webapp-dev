@@ -1,0 +1,15 @@
+
+<html>
+<body>
+  <p id="items"></p>
+  <button value="3" onclick="addToCart(value)">Add to cart</button>
+</body>
+<script type="text/javascript">
+var itemsInCart = [];
+  function addToCart(value) {
+        itemsInCart.push(value);
+        document.getElementById('items').innerHTML = itemsInCart.length;
+  }
+</script>
+  </script>
+</html>

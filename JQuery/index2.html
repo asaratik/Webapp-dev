@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+  src="http://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  <style type="text/css">
+  	.red{
+  	color:red;
+  }
+  .green{
+  	color:green;
+  }
+  </style>
+</head>
+<body>
+	<div id="d1"></div>
+	<div id="d2" class="red"></div>
+	<input type="text" id="i1"><br><br>
+	<ul id="list1">
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+	</ul>
+
+	<button id="myBtn">Button</button>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#d1').text('Hello World');
+			$('#d2').html('<h1>Hello World</h1>');
+			$('#i1').val('Hello World');
+			//alert($('#d1').text());
+			$('#d1').attr('class','something');
+			$('#d1').removeAttr('class');
+
+			$('#list1').append('<li>Last item</li>');
+			$('#list1').prepend('<li>First item</li>');
+
+			//Simalr before after which comes before and after the list
+
+			$('#d1').addClass('red');
+			//$('#d2').removeClass('green');
+
+			$('#myBtn').click(function(){
+				$('#d2').toggleClass('green');
+			});
+
+			$('#d1').css('background','pink');
+			$('#d1').width('150');
+			$('#d1').height('50');
+			//$('#d2').replaceWith('<h2>Replaced</h2');
+
+			$('li').unwrap();
+
+			$('#d2').wrap('<div></div>');
+
+
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+		src="http://code.jquery.com/jquery-3.1.1.js"
+		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		crossorigin="anonymous">
+	</script>
+  	<style type="text/css">
+  		.square,.square2{
+  			width: 100px;
+  			height: 100px;
+  			background: black;
+  			position: relative;
+  		}
+  	</style>
+</head>
+<body>
+	<button id="btnHide">Hide</button>
+	<button id="btnShow">Show</button>
+	<button id="btnTog">Toggle</button>
+
+
+	<button id="btnFadeOut">Fade out</button>
+	<button id="btnFadeIn">Fade In</button>
+	<button id="btnFadeTog">Fade Tog</button>
+
+
+	<button id="btnSlideUp">Slide Up</button>
+	<button id="btnSlideDown">Slide Down</button>
+	<button id="btnSlideTog">Slide Tog</button>
+
+	<button id="btnStop">Stop</button>
+	
+	<br><br>
+
+	<p class="p1">Lorem ipsum dolor sit amet,
+	 consectetur adipiscing elit. Nulla molestie nibh sit amet justo laoreet condimentum. Phasellus fringilla tempor fermentum. Donec vel fringilla risus, faucibus rhoncus leo. Ut nisl nisl, malesuada id rhoncus in, pretium et mauris. Duis mollis tellus non rutrum pretium. Nullam congue finibus aliquam. Aliquam quis magna non magna consectetur mattis. Fusce scelerisque facilisis volutpat.</p>
+
+	<br><br>
+
+	<button id="anim">Animate</button>
+	<br><br>
+	<div class="square">
+	</div>
+
+	<button id="anim2">Animate</button>
+	<br><br>
+	<div class="square2">
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$('#btnHide').click(function(){
+				$('.p1').hide();
+			});
+
+			$('#btnShow').click(function(){
+				$('.p1').show();
+			});
+
+			$('#btnTog').click(function(){
+				$('.p1').toggle();
+			});
+
+
+			$('#btnFadeOut').click(function(){
+				$('.p1').fadeOut(2000);
+			});
+
+			$('#btnFadeIn').click(function(){
+				$('.p1').fadeIn(2000);
+			});
+
+			$('#btnFadeTog').click(function(){
+				$('.p1').fadeToggle(2000);
+			});
+
+
+			$('#btnSlideUp').click(function(){
+				$('.p1').slideUp(1000);
+			});
+
+			$('#btnSlideDown').click(function(){
+				$('.p1').slideDown(1000);
+			});
+
+			$('#btnSlideTog').click(function(){
+				$('.p1').slideToggle(1000);
+			});
+
+
+			$('#btnStop').click(function(){
+				$('.p1').stop();
+			});
+
+			$('#anim').click(function(){
+				$('.square').animate({
+					left: '+=100px',
+					opacity: '0.5',
+					height: '+=100px',
+					width: '200px'
+				}, 'fast');
+			});
+
+
+			$('#anim2').click(function(){
+				var div = $('.square2');
+				div.animate(
+				{
+					height:'400px',opacity:'0.4'
+				},'slow');
+				
+				div.animate(
+				{
+					width:'400px',opacity:'0.8'
+				},'slow');
+				
+				div.animate(
+				{
+					height:'100px',opacity:'0.4'
+				},'slow');
+
+				div.animate(
+				{
+					width:'100px',opacity:'0.8'
+				},'slow');
+
+			});
+
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+		src="http://code.jquery.com/jquery-3.1.1.js"
+		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		crossorigin="anonymous">
+	</script>
+	<style type="text/css">
+		.container *{
+			display: block;
+			border: 2px solid grey;
+			color: grey;
+			padding: 5px;
+			margin: 15px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div>
+			div [great-grandparent]
+			<ul>
+				ul [grandparent]
+				<li>
+					li [parent]
+						<span>span</span>
+				</li>
+			</ul>
+		</div>
+
+		<div> div [grandparent]
+			<p> p [parent]
+				<span>
+					span
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//$('span').parent().css({'color':'red','border':'2px red solid'});
+			//$('span').parents().css({'color':'red','border':'2px red solid'});
+
+			//$('span').parents('ul').css({'color':'red','border':'2px red solid'});
+
+			//$('span').parentsUntil('ul').css({'color':'red','border':'2px red solid'});
+
+			//Similar : first, last, children, find, siblings, next, nextUntil,nextAll,prev,prevAll,prevUntil methods.
+		});
+	</script>
+
+</body>
+</html>
